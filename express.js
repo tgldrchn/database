@@ -18,6 +18,12 @@ const connect = () => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send({
+    data: users,
+  });
+});
+
 app.listen(port, async () => {
   console.log(`Server running ${port}`);
   connect();
